@@ -28,7 +28,7 @@ const questions = [
         type: 'list',
         message: 'Which license would you like to choose?',
         name: 'license',
-        choices: ['MIT', 'BSD', 'Apache'],
+        choices: ['MIT', 'BSD', 'Apache', 'None'],
     },
     {
         type: 'input',
