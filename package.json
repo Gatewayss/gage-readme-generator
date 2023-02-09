@@ -9,6 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "8.2.4"
-  }
+    "inquirer": "^8.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gatewayss/gage-readme-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gatewayss/gage-readme-generator/issues"
+  },
+  "homepage": "https://github.com/Gatewayss/gage-readme-generator#readme"
 }
