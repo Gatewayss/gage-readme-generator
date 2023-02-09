@@ -1,7 +1,18 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) { 
-  console.log("i got it ");
+function renderLicenseBadge(license) {
+  switch (license) {
+    case 'MIT':
+      return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+      break;
+    case 'BSD':
+      return '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)'
+      break;
+    case 'Apache':
+      return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+      break;
+    default: console.log('Im sorry something went wrong');
+  }
 }
 
 // TODO: Create a function that returns the license link
