@@ -62,7 +62,7 @@ function writeToFile(fileName, data) {
     })
 };
 
-// initializes app, passes the answers as data to generate markdown file
+// initializes app and passes the answers as data to generate markdown file
 function init() {
     return inquirer.prompt(questions)
         .then((answers) => {

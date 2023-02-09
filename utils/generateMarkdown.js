@@ -30,7 +30,7 @@ function renderLicenseLink(license) {
   }
 }
 
-// renders the license description 
+// renders the chosen license description 
 function renderLicenseSection(license) {
   switch (license) {
     case 'MIT':
@@ -52,7 +52,7 @@ function generateMarkdown(data) {
   const badge = renderLicenseBadge(license)
   const licenseLink = renderLicenseLink(license)
   const licenseSection = renderLicenseSection(license)
-  
+
   return `
   # ${data.title}
 
