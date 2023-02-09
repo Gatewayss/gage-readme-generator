@@ -58,37 +58,38 @@ function generateMarkdown(data) {
   ${badge}
 
   # Table of Contents
-  1. [application description](#description)
+
+  1. [Description](#description)
   2. [Installation](#installation)
-  3. [Usage](#usage)
-  4. [License](#license)
+  3. [License](#license)
+  4. [Usage](#usage)
   5. [Contributing](#contributing)
-  6. [Tests](#test)
+  6. [Tests](#tests)
   7. [Questions](#questions)
 
-  # Description
-  ## ${data.description}
+  ## Description
+  ${data.description}
 
-  # Installation
-  ## ${data.installation}
+  ## Installation
+  ${data.installation}
 
-  # License 
-  ## ${licenseLink}
+  ## License 
+  ${licenseLink}
   ${licenseSection}
 
-  # Usage
-  ## ${data.usage}
+  ## Usage
+  ${data.usage}
   
-  # Contributing 
-  ## ${data.contributors}
+  ## Contributing 
+  ${data.contributors}
 
-  # Tests
-  ## ${data.test}
+  ## Tests
+  ${data.test}
 
-  # Questions 
-  ## ${data.github}
-  ## "https://github.com/${data.github}"
-  ## ${data.email}
+  ## Questions 
+  Github username: ${data.github}
+  [link to Github profile](https://github.com/${data.github})
+  to contact me reach me by email: ${data.email}
 `;
 }
 
