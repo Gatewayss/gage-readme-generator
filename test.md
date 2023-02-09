@@ -1,7 +1,7 @@
 
   # q
 
-  undefined
+  
 
   # Table of Contents
   1. [application description](#description)
