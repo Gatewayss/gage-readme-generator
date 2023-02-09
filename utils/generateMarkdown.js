@@ -46,12 +46,13 @@ function renderLicenseSection(license) {
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// takes the prompt answers and renders it with markdown syntax 
 function generateMarkdown(data) {
   const { license } = data
   const badge = renderLicenseBadge(license)
   const licenseLink = renderLicenseLink(license)
   const licenseSection = renderLicenseSection(license)
+  
   return `
   # ${data.title}
 

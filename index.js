@@ -1,8 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateMarkdown = require('./utils/generateMarkdown')
+const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -21,7 +20,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Enters examples of usage if you have any (click enters to skip).',
+        message: 'What are your examples of usage?',
         name: 'usage',
     },
     {
@@ -52,36 +51,25 @@ const questions = [
     },
 ];
 
-// TODO: Create a function to write README file
+// renders the final version of the readme
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
         if (err)
-          console.log(err);
+            console.log(err);
         else {
-          console.log("File written successfully\n");
+            console.log("\nFile written successfully\n");
         }
-      })
-}
+    })
+};
 
-// writeToFile()
-
-// TODO: Create a function to initialize app
+// initializes app, passes the answers as data to generate markdown file
 function init() {
     return inquirer.prompt(questions)
         .then((answers) => {
-           const markdown = generateMarkdown(answers)
-           writeToFile('test.md', markdown)
-           // console.log(markdown);
-            // return writeToFile("hello.md", answers)
+            const markdown = generateMarkdown(answers)
+            // passes markdown file to be rendered 
+            writeToFile('generatedREADME.md', markdown)
         })
-        .catch((error) => {
-            if (error.isTtyError) {
-                console.log("Prompt couldn't be rendered in the current environment");
-            } else {
-                console.log("oops try again");
-            }
-        })
-}
+};
 
-// Function call to initialize app
 init();
