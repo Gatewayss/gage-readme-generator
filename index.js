@@ -50,20 +50,27 @@ const questions = [
     },
 ];
 
- /*
-    .then((response) =>
-    response.confirm === response.password
-        ? fs.writeFileSync('generatedREADME.md', JSON.stringify(response))
-        : console.log('Oops please try again ?!')
-);
-*/
-
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    console.log(`got the data!!! ${fileName} ${JSON.stringify(data)}`);
+}
 
-writeToFile()
+// writeToFile()
+
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    return inquirer.prompt(questions)
+        .then((answers) => {
+            return writeToFile("hello.md", answers)
+        })
+        .catch((error) => {
+            if (error.isTtyError) {
+                console.log("Prompt couldn't be rendered in the current environment");
+            } else {
+                console.log("oops try again");
+            }
+        })
+}
 
 // Function call to initialize app
 init();
